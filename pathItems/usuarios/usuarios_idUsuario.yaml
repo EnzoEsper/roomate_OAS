@@ -1,0 +1,47 @@
+put:
+  summary: Actualiza los datos de un usuario
+  operationId: actualizarUsuario
+  description: >-
+    Actualiza los datos de un usuario con los campos enviados en el cuerpo de la petición
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario que se va a actualizar
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/usuarios/ActualizacionParcialUsuario.yaml"
+    description: campos modificados
+    required: true
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/usuarios/Usuario.yaml"
+    "404":
+      description: usuario no encontrado
+delete:
+  summary: Elimina un usuario
+  operationId: eliminarUsuarioPorId
+  description: >-
+    Elimina un usuario por id
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario que se va a eliminar
+      required: true
+      schema:
+        type: integer
+  responses:
+    "204":
+      description: OK

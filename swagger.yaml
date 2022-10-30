@@ -12,7 +12,11 @@ tags:
 
 paths:
   /usuarios:
-    $ref: "pathitems/usuarios/usuarios.yaml"
+    $ref: "pathItems/usuarios/usuarios.yaml"
+  /usuarios/buscar:
+    $ref: "pathItems/usuarios/usuarios_buscar.yaml"
+  /usuarios/{idUsuario}:
+    $ref: "pathItems/usuarios/usuarios_idUsuario.yaml"
 
 components:
   schemas:
@@ -21,3 +25,5 @@ components:
       $ref: "schemas/usuarios/Usuario.yaml"
     CreacionUsuario:
       $ref: "schemas/usuarios/CreacionUsuario.yaml"
+    ActualizacionParcialUsuario:
+      $ref: "schemas/usuarios/ActualizacionParcialUsuario.yaml"

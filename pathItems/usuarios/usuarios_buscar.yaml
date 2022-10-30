@@ -1,0 +1,28 @@
+get:
+  summary: Obtiene los registros de usuarios que coinciden con los parámetros
+  description: >-
+    Obtiene los registros de usuarios que coinciden con los parámetros que se pasan a través de query string
+  tags:
+    - usuarios
+  parameters:
+    - in: query
+      name: id
+      description: id de usuario
+      required: false
+      schema:
+        type: integer
+    - in: query
+      name: id_usuario_fb
+      description: id de fb de usuario
+      required: false
+      schema:
+        type: string
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "../../schemas/usuarios/Usuario.yaml"
+    "404":
+      description: usuario no encontrado

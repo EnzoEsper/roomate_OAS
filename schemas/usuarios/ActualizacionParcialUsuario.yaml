@@ -1,0 +1,9 @@
+type: object
+description: Atualizacion parcial de ususario de Roomate
+properties:
+  url_foto_perfil:
+    description: Url de foto de perfil de usuario
+    type: string
+  fecha_ult_sesion:
+    description: Fecha de ultimo inicio de sesion de usuario
+    type: string
