@@ -1,0 +1,39 @@
+type: object
+description: Crear usuario de Roomate
+properties:
+  username:
+    description: Usuario
+    type: string
+  id_usuario_fb:
+    description: Id de Firebase de usuario
+    type: string
+  nombre:
+    description: Nombre de usuario
+    type: string
+  apellido:
+    description: Apellido de usuario
+    type: string
+  id_genero:
+    description: Id de genero de usuario
+    type: integer
+  fecha_nac:
+    description: Fecha de nacimiento de usuario
+    type: string
+  fecha_alta:
+    description: Fecha de alta de usuario
+    type: string
+  id_localidad:
+    description: Id de localidad de usuario
+    type: integer
+  id_provincia:
+    description: Id de provincia de usuario
+    type: integer
+  email:
+    description: Email de usuario
+    type: string
+  id_ocupacion:
+    description: Id de ocupacion de usuario
+    type: integer
+  url_foto_perfil:
+    description: Url de foto de perfil de usuario
+    type: string
