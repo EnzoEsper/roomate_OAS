@@ -5,9 +5,19 @@ info:
 servers:
   - url: https://arcane-anchorage-82385.herokuapp.com
     description: Servidor de Heroku
+
+tags:
+  - name: usuarios
+    description: Controlador de Usuarios
+
 paths:
-  /test:
-    get:
-      responses:
-        "200":
-          description: OK
+  /usuarios:
+    $ref: "pathitems/usuarios/usuarios.yaml"
+
+components:
+  schemas:
+    # Usuarios
+    Usuario:
+      $ref: "schemas/usuarios/Usuario.yaml"
+    CreacionUsuario:
+      $ref: "schemas/usuarios/CreacionUsuario.yaml"

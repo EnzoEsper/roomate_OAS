@@ -1,0 +1,38 @@
+get:
+  summary: Obtiene todos los registros de usuarios
+  operationId: getUsuarios
+  description: >-
+    Obtiene todos los registros de usuarios con todos los campos
+  tags:
+    - usuarios
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              allOf:
+                - $ref: "../../schemas/usuarios/Usuario.yaml"
+post:
+  summary: Crea un nuevo usuario
+  operationId: crearUsuario
+  description: >-
+    Crea un nuevo usuario utilizando el JSON enviado en el body de la petición
+  tags:
+    - usuarios
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/usuarios/CreacionUsuario.yaml"
+    description: los datos del usuario nuevo en JSON
+    required: true
+  responses:
+    "201":
+      description: OK
+      content:
+        text/plain:
+          schema:
+            $ref: "../../schemas/usuarios/Usuario.yaml"
