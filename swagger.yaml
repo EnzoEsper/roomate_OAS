@@ -1,0 +1,13 @@
+openapi: "3.0.2"
+info:
+  title: Roomate BFF API
+  version: "1.0"
+servers:
+  - url: https://arcane-anchorage-82385.herokuapp.com
+    description: Servidor de Heroku
+paths:
+  /test:
+    get:
+      responses:
+        "200":
+          description: OK
