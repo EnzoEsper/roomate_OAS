@@ -17,6 +17,24 @@ paths:
     $ref: "pathItems/usuarios/usuarios_buscar.yaml"
   /usuarios/{idUsuario}:
     $ref: "pathItems/usuarios/usuarios_idUsuario.yaml"
+  /usuarios/{idUsuario}/intereses:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_intereses.yaml"
+  /usuarios/{idUsuario}/rec_mult:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_recMult.yaml"
+  /usuarios/{idUsuario}/rec_mult/{idRecMult}:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_recMult_idRecMult.yaml"
+  /usuarios/{idUsuario}/likes_enviados:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_likesEnviados.yaml"
+  /usuarios/{idUsuario}/likes_recibidos:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_likesRecibidos.yaml"
+  /usuarios/{idUsuario}/likes/buscar:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_likes_buscar.yaml"
+  /usuarios/{idUsuario}/likes:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_likes.yaml"
+  /usuarios/{idUsuario}/likes/{idUsuarioDestino}:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_likes_idUsuarioDestino.yaml"
+  /usuarios/{idUsuario}/matches:
+    $ref: "pathItems/usuarios/usuarios_idUsuario_matches.yaml"
 
 components:
   schemas:
@@ -27,3 +45,7 @@ components:
       $ref: "schemas/usuarios/CreacionUsuario.yaml"
     ActualizacionParcialUsuario:
       $ref: "schemas/usuarios/ActualizacionParcialUsuario.yaml"
+    CreacionInteresesUsuario:
+      $ref: "schemas/usuarios/CreacionInteresesUsuario.yaml"
+    EliminacionInteresesUsuario:
+      $ref: "schemas/usuarios/EliminacionInteresesUsuario.yaml"

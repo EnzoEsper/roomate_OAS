@@ -1,0 +1,9 @@
+type: object
+description: Eliminar intereses para un usuario de Roomate
+properties:
+  id_intereses:
+    description: arreglo de ids correspondientes a los intereses
+    type: array
+    items:
+      type: integer
+    example: [1, 2, 4]

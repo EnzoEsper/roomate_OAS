@@ -1,0 +1,19 @@
+get:
+  summary: Obtiene likes recibidos por el usuario
+  operationId: getLikesEnviadosUsuario
+  description: >-
+    Obtiene los likes recibidos por el usuario
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK
+    "404":
+      description: not found

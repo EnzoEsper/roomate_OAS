@@ -1,0 +1,19 @@
+get:
+  summary: Obtiene el historial de matches del usuario
+  operationId: getMatchesUsuario
+  description: >-
+    Obtiene el historial de matches del usuario
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK
+    "404":
+      description: not found

@@ -1,0 +1,12 @@
+type: object
+description: Agregar recurso multimedia para un usuario de Roomate
+properties:
+  id_tipo_rec:
+    description: id tipo recurso
+    type: integer
+  uri:
+    description: url del recurso
+    type: string
+  id_perf_busq:
+    description: id perfil busqueda
+    type: integer

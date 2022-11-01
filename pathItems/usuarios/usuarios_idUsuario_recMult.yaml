@@ -1,0 +1,58 @@
+get:
+  summary: Obtiene los recursos multimedia de un usuario
+  operationId: getRecMultUsuario
+  description: >-
+    Obtiene los recursos multimedia del usuario especificado
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario para el cual se van a consultar los recursos multimedia
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              allOf:
+                - $ref: "../../schemas/usuarios/RecursoMultimedia.yaml"
+            example:
+              [
+                {
+                  "id": 2,
+                  "id_tipo_rec_mm": 1,
+                  "id_usuario": 5,
+                  "uri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe10UcU1QAWb2ahW4RF18jjDMNwY45es3mQKedWL4D4Q&s",
+                  "id_perf_busq": 5,
+                },
+              ]
+post:
+  summary: Agrega un registro de recurso multimedia para un usuario
+  operationId: crearRecMultUsuario
+  description: >-
+    Agrega al usuario identificado por id un registro de recurso multimedia
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/usuarios/CreacionRecursoMultimediaUsuario.yaml"
+    description: recurso multimedia a asociar al usuario
+    required: true
+  responses:
+    "200":
+      description: OK

@@ -1,0 +1,23 @@
+delete:
+  summary: Borra el registro de like del usuario
+  operationId: agregarLikesUsuario
+  description: >-
+    Borra el registro de like del usuario idUsuario hacia el usuario idUsuarioDestino
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario origen
+      required: true
+      schema:
+        type: integer
+    - in: path
+      name: idUsuarioDestino
+      description: id del usuario destino
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK

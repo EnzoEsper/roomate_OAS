@@ -1,0 +1,17 @@
+post:
+  summary: Agrega un registro de like para el usuario
+  operationId: agregarLikesUsuario
+  description: >-
+    Agrega un registro de like para el usuario
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK

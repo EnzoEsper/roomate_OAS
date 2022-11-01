@@ -1,0 +1,58 @@
+put:
+  summary: Edita un registro del recurso multimedia de un usuario
+  operationId: editarRecMultUsuario
+  description: >-
+    Edita un registro del recurso multimedia de un usuario identificado por id
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+    - in: path
+      name: idRecMult
+      description: id del recurso multimedia
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          description: registro del recurso multimedia a editar
+          properties:
+            uri:
+              type: string
+              description: registro uri del recurso multimeda
+    description: registro del recurso multimedia a modificar
+    required: true
+  responses:
+    "200":
+      description: OK
+delete:
+  summary: Elimina el recurso multimedia de un usuario
+  operationId: eliminarRecMultUsuario
+  description: >-
+    Elimina el recurso multimedia de un usuario identificado por id
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+    - in: path
+      name: idRecMult
+      description: id del recurso multimedia
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK

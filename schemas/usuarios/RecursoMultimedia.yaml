@@ -1,0 +1,18 @@
+type: object
+description: Recurso multimedia asociado a un usuario de Roomate
+properties:
+  id:
+    type: integer
+    description: id de recurso
+  id_tipo_rec_mm:
+    type: integer
+    description: id del tipo de recurso
+  id_usuario:
+    type: integer
+    description: id del usuario
+  uri:
+    type: string
+    description: url del recurso
+  id_perf_busq:
+    type: integer
+    description: id de perfil de busqueda

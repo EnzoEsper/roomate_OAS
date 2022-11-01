@@ -1,0 +1,75 @@
+get:
+  summary: Obtiene los intereses de un usuario
+  operationId: getInteresesUsuario
+  description: >-
+    Obtiene los intereses del usuario especificado
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario para el cual se van a consultar los intereses
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              allOf:
+                - $ref: "../../schemas/usuarios/Intereses.yaml"
+            example: [{ "id": 1, "nombre": "Deportes" }, { "id": 2, "nombre": "Moda" }]
+    "404":
+      description: not found
+post:
+  summary: Crea intereses para un usuario
+  operationId: crearInteresesUsuario
+  description: >-
+    Agrega al usuario identificado por id los intereses enviados en el body request
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/usuarios/CreacionInteresesUsuario.yaml"
+    description: intereses a asociar al usuario
+    required: true
+  responses:
+    "201":
+      description: OK
+delete:
+  summary: Elimina intereses de un usuario
+  operationId: eliminarInteresesUsuario
+  description: >-
+    Elimina al usuario identificado por id los intereses enviados en el body de la request
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: "../../schemas/usuarios/EliminacionInteresesUsuario.yaml"
+    description: intereses a eliminar del usuario
+    required: true
+  responses:
+    "201":
+      description: OK

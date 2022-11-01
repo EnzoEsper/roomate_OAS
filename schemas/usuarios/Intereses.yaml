@@ -1,0 +1,9 @@
+type: object
+description: Intereses asociados a un usuario de Roomate
+properties:
+  id:
+    type: integer
+    description: id de interes
+  nombre:
+    type: string
+    description: nombre del interes

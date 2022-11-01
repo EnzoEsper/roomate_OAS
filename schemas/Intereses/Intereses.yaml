@@ -1,0 +1,12 @@
+type: object
+description: Intereses generales disponibles en Roomate
+properties:
+  id:
+    type: integer
+    description: id de interes
+  nombre:
+    type: string
+    description: nombre del interes
+  descripcion:
+    type: string
+    description: descripcion del interes

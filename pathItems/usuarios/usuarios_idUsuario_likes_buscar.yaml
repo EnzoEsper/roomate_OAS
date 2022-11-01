@@ -1,0 +1,19 @@
+get:
+  summary: Consulta historial de likes del usuario
+  operationId: getHistorialLikesUsuario
+  description: >-
+    Consulta historial de likes del usuario según parámetros del query string
+  tags:
+    - usuarios
+  parameters:
+    - in: path
+      name: idUsuario
+      description: id del usuario
+      required: true
+      schema:
+        type: integer
+  responses:
+    "200":
+      description: OK
+    "404":
+      description: not found
